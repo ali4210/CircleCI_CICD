@@ -109,7 +109,7 @@ node_modules/
 
 ---
 
-## 🔧 Troubleshooting & Fixes
+##  🔧 Troubleshooting & Fixes
 
 ❌ Issue 1: "sh: 1: jest: not found"
 Error: Exit code 127 in CircleCI. Reason: The container did not have the dependencies installed. Fix: Added the npm install step before running tests.
