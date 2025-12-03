@@ -96,7 +96,7 @@ workflows:
   sample-workflow:
     jobs:
       - build-and-test
-
+```
 
 Step 3: Git Ignore Rules
 To keep the repo clean, we strictly ignore the node_modules folder. File: .gitignore
@@ -106,7 +106,10 @@ Plaintext
 node_modules/
 .DS_Store
 .env
-🔧 Troubleshooting & Fixes
+
+
+
+###🔧 Troubleshooting & Fixes
 ❌ Issue 1: "sh: 1: jest: not found"
 Error: Exit code 127 in CircleCI. Reason: The container did not have the dependencies installed. Fix: Added the npm install step before running tests.
 
