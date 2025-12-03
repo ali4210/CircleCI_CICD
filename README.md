@@ -42,7 +42,7 @@ Building this pipeline wasn't just about copying code—it was about debugging r
     * *Solution:* We discovered `package.json` was missing the `devDependencies` section.
 3.  **The Fix:** We properly installed Jest using `--save-dev` and updated the config.
 
---- 
+---
 
 ## 📖 Complete Setup Guide (A-Z)
 
@@ -96,43 +96,28 @@ workflows:
   sample-workflow:
     jobs:
       - build-and-test
-```
-
-### Step 3: Git Ignore Rules
+Step 3: Git Ignore Rules
 To keep the repo clean, we strictly ignore the node_modules folder. File: .gitignore
 
 Plaintext
 
-node_modules/
-.DS_Store
-.env
+node_modules/ .DS_Store .env
 
----
+🔧 Troubleshooting & Fixes
+❌ Issue 1: "sh: 1: jest: not found" Error: Exit code 127 in CircleCI. Reason: The container did not have the dependencies installed. Fix: Added the npm install step before running tests.
 
-##  🔧 Troubleshooting & Fixes
+❌ Issue 2: "ReferenceError: require is not defined" Error: Pipeline runs but fails on syntax. Fix: Ensured we are using standard CommonJS syntax in package.json unless using TypeScript.
 
-❌ Issue 1: "sh: 1: jest: not found"
-Error: Exit code 127 in CircleCI. Reason: The container did not have the dependencies installed. Fix: Added the npm install step before running tests.
+❌ Issue 3: Missing devDependencies Error: npm install runs successfully, but jest is still not found. Reason: The package.json file did not list jest. Fix: Ran npm install --save-dev jest locally and pushed the updated package.json.
 
-❌ Issue 2: "ReferenceError: require is not defined"
-Error: Pipeline runs but fails on syntax. Fix: Ensured we are using standard CommonJS syntax in package.json unless using TypeScript.
-
-❌ Issue 3: Missing devDependencies
-Error: npm install runs successfully, but jest is still not found. Reason: The package.json file did not list jest. Fix: Ran npm install --save-dev jest locally and pushed the updated package.json.
-
----
-
-## 📚 Key Learnings
-
+📚 Key Learnings
 Package.json is the Map: CircleCI is blind without a correct package.json. It defines exactly what gets installed.
 
 Debugging via Exit Codes: Learning the difference between Code 127 (Command not found) and Code 1 (Test failed) is crucial.
 
 Clean Repos: Using .gitignore for node_modules is mandatory for performance and best practices.
 
----
-
-## 🤝 Connect With Me
+🤝 Connect With Me
 I'm actively learning and documenting my journey in AIOps and DevOps.
 
 Current Focus: Mastering CI/CD Pipelines
@@ -142,6 +127,5 @@ Institution: Al-Nafi International College
 Background: Computer Science & Engineering
 
 <div align="center">
-
 
 <h3>⭐ If you found this helpful, please star this repository! ⭐</h3> <p>Built with 💙 by Saleem Ali | DevOps Enthusiast</p> <p><i>"Automation is not just about saving time, it's about reducing error."</i></p> </div>
