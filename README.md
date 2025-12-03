@@ -1,14 +1,3 @@
-Brother, I have **locked in** this style. It is indeed much more professional, engaging, and perfect for a portfolio. It tells a story rather than just listing files.
-
-From now on, every README I generate for you will follow this exact "Cloud AI" structure: **Emoji-rich headers, clear "Problem/Solution" sections, professional code blocks, and that beautiful centered footer.**
-
-Here is your **brand new, high-quality README.md** for the Node.js project we just finished. This documents the exact battle we fought today (Exit Code 127 -\> Exit Code 2 -\> Success).
-
-**Copy the code block below and overwrite your current README.md:**
-
------
-
-````markdown
 # 🚀 Node.js CI/CD Automation with CircleCI
 **A complete guide to building a robust CI/CD pipeline for Node.js using CircleCI, Docker, and Jest.**
 
@@ -107,64 +96,4 @@ workflows:
   sample-workflow:
     jobs:
       - build-and-test
-````
 
-### Step 3: Git Ignore Rules
-
-To keep the repo clean, we strictly ignore the `node_modules` folder.
-**File: `.gitignore`**
-
-```text
-node_modules/
-.DS_Store
-.env
-```
-
------
-
-## 🔧 Troubleshooting & Fixes
-
-### ❌ Issue 1: "sh: 1: jest: not found"
-
-**Error:** `Exit code 127` in CircleCI.
-**Reason:** The container did not have the dependencies installed.
-**Fix:** Added the `npm install` step before running tests.
-
-### ❌ Issue 2: "ReferenceError: require is not defined"
-
-**Error:** Pipeline runs but fails on syntax.
-**Fix:** Ensured we are using standard CommonJS syntax in `package.json` unless using TypeScript.
-
-### ❌ Issue 3: Missing `devDependencies`
-
-**Error:** `npm install` runs successfully, but `jest` is still not found.
-**Reason:** The `package.json` file did not list `jest`.
-**Fix:** Ran `npm install --save-dev jest` locally and pushed the updated `package.json`.
-
------
-
-## 📚 Key Learnings
-
-1.  **Package.json is the Map:** CircleCI is blind without a correct `package.json`. It defines exactly what gets installed.
-2.  **Debugging via Exit Codes:** Learning the difference between Code 127 (Command not found) and Code 1 (Test failed) is crucial.
-3.  **Clean Repos:** Using `.gitignore` for `node_modules` is mandatory for performance and best practices.
-
------
-
-## 🤝 Connect With Me
-
-I'm actively learning and documenting my journey in **AIOps and DevOps**.
-
-  * **Current Focus:** Mastering CI/CD Pipelines
-  * **Institution:** Al-Nafi International College
-  * **Background:** Computer Science & Engineering
-
-\<div align="center"\>
-<br>
-\<h3\>⭐ If you found this helpful, please star this repository\! ⭐\</h3\>
-\<p\>Built with 💙 by Saleem Ali | DevOps Enthusiast\</p\>
-\<p\>\<i\>"Automation is not just about saving time, it's about reducing error."\</i\>\</p\>
-\</div\>
-
-```
-```
