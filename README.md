@@ -1,3 +1,5 @@
+Markdown
+
 # 🚀 Node.js CI/CD Automation with CircleCI
 **A complete guide to building a robust CI/CD pipeline for Node.js using CircleCI, Docker, and Jest.**
 
@@ -101,8 +103,9 @@ To keep the repo clean, we strictly ignore the node_modules folder. File: .gitig
 
 Plaintext
 
-node_modules/ .DS_Store .env
-
+node_modules/
+.DS_Store
+.env
 🔧 Troubleshooting & Fixes
 ❌ Issue 1: "sh: 1: jest: not found" Error: Exit code 127 in CircleCI. Reason: The container did not have the dependencies installed. Fix: Added the npm install step before running tests.
 
@@ -127,5 +130,6 @@ Institution: Al-Nafi International College
 Background: Computer Science & Engineering
 
 <div align="center">
+
 
 <h3>⭐ If you found this helpful, please star this repository! ⭐</h3> <p>Built with 💙 by Saleem Ali | DevOps Enthusiast</p> <p><i>"Automation is not just about saving time, it's about reducing error."</i></p> </div>
