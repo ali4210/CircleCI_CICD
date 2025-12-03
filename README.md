@@ -109,7 +109,7 @@ node_modules/
 
 
 
-###🔧 Troubleshooting & Fixes
+##🔧 Troubleshooting & Fixes
 ❌ Issue 1: "sh: 1: jest: not found"
 Error: Exit code 127 in CircleCI. Reason: The container did not have the dependencies installed. Fix: Added the npm install step before running tests.
 
@@ -119,14 +119,14 @@ Error: Pipeline runs but fails on syntax. Fix: Ensured we are using standard Com
 ❌ Issue 3: Missing devDependencies
 Error: npm install runs successfully, but jest is still not found. Reason: The package.json file did not list jest. Fix: Ran npm install --save-dev jest locally and pushed the updated package.json.
 
-📚 Key Learnings
+## 📚 Key Learnings
 Package.json is the Map: CircleCI is blind without a correct package.json. It defines exactly what gets installed.
 
 Debugging via Exit Codes: Learning the difference between Code 127 (Command not found) and Code 1 (Test failed) is crucial.
 
 Clean Repos: Using .gitignore for node_modules is mandatory for performance and best practices.
 
-🤝 Connect With Me
+## 🤝 Connect With Me
 I'm actively learning and documenting my journey in AIOps and DevOps.
 
 Current Focus: Mastering CI/CD Pipelines
