@@ -98,7 +98,7 @@ workflows:
       - build-and-test
 ```
 
-Step 3: Git Ignore Rules
+### Step 3: Git Ignore Rules
 To keep the repo clean, we strictly ignore the node_modules folder. File: .gitignore
 
 Plaintext
